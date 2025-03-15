@@ -32,4 +32,5 @@ st.markdown('''
 # Interactive chat input and response
 if prompt := st.chat_input("Ask me anything..."):
     response = model.generate_content(prompt)
-    st.write(response.text)
+    st.chat_message("user").markdown(prompt)
+    st.chat_message("assistant").markdown(response.text)

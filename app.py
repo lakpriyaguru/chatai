@@ -29,6 +29,7 @@ st.markdown('''
   </div>
 ''', unsafe_allow_html=True)
 
-# Test the model by generating content
-response = model.generate_content("Tell me about yourself.")
-st.write(response.text)
+# Interactive chat input and response
+if prompt := st.chat_input("Ask me anything..."):
+    response = model.generate_content(prompt)
+    st.write(response.text)

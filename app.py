@@ -4,11 +4,11 @@ import google.generativeai as genai
 
 # Function to retrieve the API key from Streamlit secrets
 def get_api_key():
-  try:
-    return st.secrets["GOOGLE_GEMINI_KEY"]
-  except KeyError:
-    st.error("API key not found. Please add it to Streamlit secrets.")
-    st.stop()
+    try:
+        return st.secrets["GOOGLE_GEMINI_KEY"]
+    except KeyError:
+        st.error("API key not found. Please add it to Streamlit secrets.")
+        st.stop()
 
 # Configure the API key for the generative AI service
 api_key = get_api_key()
@@ -29,8 +29,16 @@ st.markdown('''
   </div>
 ''', unsafe_allow_html=True)
 
+# Initialize chat history
+if "chat" not in st.session_state:
+  st.session_state.chat = model.start_chat(history=[])
+
 # Interactive chat input and response
 if prompt := st.chat_input("Ask me anything..."):
+    st.session_state.chat.history.append(("user", prompt))
     response = model.generate_content(prompt)
-    st.chat_message("user").markdown(prompt)
-    st.chat_message("assistant").markdown(response.text)
+    st.session_state.chat.history.append(("assistant", response.text))
+
+# Display chat history
+for role, message in st.session_state.chat.history:
+    st.chat_message(role).markdown(message)

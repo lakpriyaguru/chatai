@@ -33,12 +33,13 @@ st.markdown('''
 if "chat" not in st.session_state:
   st.session_state.chat = model.start_chat(history=[])
 
+# Display chat history
+for role, message in st.session_state.chat.history:
+    st.chat_message(role).markdown(message)
+    
 # Interactive chat input and response
 if prompt := st.chat_input("Ask me anything..."):
     st.session_state.chat.history.append(("user", prompt))
     response = model.generate_content(prompt)
     st.session_state.chat.history.append(("assistant", response.text))
 
-# Display chat history
-for role, message in st.session_state.chat.history:
-    st.chat_message(role).markdown(message)

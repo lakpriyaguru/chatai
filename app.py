@@ -28,3 +28,7 @@ st.markdown('''
     <p>Powered by Google AI<br>Made with ❤️ by <a href="https://lakpriyaguru.me" target="_blank">@lakpriyaguru</a></p>
   </div>
 ''', unsafe_allow_html=True)
+
+# Test the model by generating content
+response = model.generate_content("Tell me about yourself.")
+st.write(response.text)

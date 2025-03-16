@@ -45,7 +45,7 @@ Store your **Google Gemini AI API Key** securely in Streamlit secrets.
 2. Obtain your API key from [Google AI Studio](https://aistudio.google.com/apikey).
 3. Add your API key to the `secrets.toml` file:
    ```toml
-   GOOGLE_GEMINI_KEY = "your-gemini-api-key"
+   GOOGLE_GEMINI_KEY = "your_google_genai_api_key"
    ```
 4. If deploying on **Streamlit Cloud**, add the secret under _App Settings > Secrets_.
 
@@ -92,10 +92,8 @@ This project is open-source and available under the **MIT License**.
 
 ## 📧 Contact
 
-Have questions or feedback? We'd love to hear from you!
+Have questions or feedback? I'd love to hear from you! Feel free to reach out via [lakpriyaguru.me](https://lakpriyaguru.me).
 
-- **Website:** [lakpriyaguru.me](https://lakpriyaguru.me)
-- **GitHub:** [lakpriyaguru](https://github.com/lakpriyaguru)
-- **LinkTree:** [lakpriyaguru](https://linktr.ee/lakpriyaguru)
+If you found this project helpful, consider giving it a ⭐ on GitHub!
 
-Happy coding! 🚀
+Follow me for more updates and new projects. Happy coding! 🚀

@@ -94,6 +94,4 @@ This project is open-source and available under the **MIT License**.
 
 Have questions or feedback? I'd love to hear from you! Feel free to reach out via [lakpriyaguru.me](https://lakpriyaguru.me).
 
-If you found this project helpful, consider giving it a ⭐ on GitHub!
-
-Follow me for more updates and new projects. Happy coding! 🚀
+If you found this project helpful, consider giving it a ⭐ on GitHub! Follow me for more updates and new projects. Happy coding! 🚀
